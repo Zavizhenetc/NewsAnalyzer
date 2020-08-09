@@ -1,0 +1,13 @@
+.result__date {
+  font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 133%;
+  color: #b6bcbf;
+}
+
+@media screen and (max-width: 910px) {
+  .result__date {
+    margin: 0;
+    padding: 7% 0;
+  }
+}

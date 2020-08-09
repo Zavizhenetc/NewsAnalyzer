@@ -1,0 +1,14 @@
+.history__header {
+  padding-left: 4.5%;
+  padding-right: 8.5%;
+  padding-top: 5%;
+  padding-bottom: 4.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+@media screen and (max-width: 810px) {
+  .history__header {
+    padding-top: 6%;
+  }
+}

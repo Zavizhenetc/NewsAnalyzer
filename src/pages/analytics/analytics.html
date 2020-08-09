@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alex Zavizhenetc" />
+    <title>NewsAnalyzer</title>
+    <link
+      rel="shortcut icon"
+      href="<%= require('../../images/favicon.ico').default %> "
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>" />
+  </head>
+  <body class="root">
+    <header class="header container">
+      <a
+        class="header__logo header__logo_white"
+        href="../index.html"
+        title="на главную"
+        >NewsAnalyzer</a
+      >
+      <nav class="header__nav">
+        <ul class="header__links">
+          <li>
+            <a
+              class="header__link header__link_white"
+              href="../index.html"
+              title="на главную"
+              >Главная</a
+            >
+          </li>
+          <li>
+            <a class="header__link header__link_white" href="../about.html">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- хлебные крошки -->
+      <section class="breadcrumbs container">
+        <ul class="breadcrumbs__list">
+          <li>
+            <a
+              class="breadcrumbs__list-link"
+              href="../index.html"
+              title="на главную"
+            >
+              Главная
+            </a>
+          </li>
+          <li>
+            <a
+              class="breadcrumbs__list-link breadcrumbs__list-link_activ"
+              href="#"
+            >
+              / Аналитика</a
+            >
+          </li>
+        </ul>
+      </section>
+      <!-- заголовок статистики -->
+      <section class="analytics-heading container">
+        <h2 class="analytics-heading__title">
+          Вы спросили: «Путешествия»
+        </h2>
+        <p class="analytic-heading__text">
+          Новостей за неделю:
+          <span class="analytic-heading__text-digit">34 324</span>
+        </p>
+        <p class="analytic-heading__text">
+          Упоминаний в загаловках:
+          <span class="analytic-heading__text-digit"> 235</span>
+        </p>
+      </section>
+      <!-- статистика -->
+      <section class="statistic">
+        <h2 class="statistic__title container">
+          Аналитика по дням
+        </h2>
+        <div class="container">
+          <ul class="statistic__table-title">
+            <li class="statistic__table-date">Дата (август)</li>
+            <li class="statistic__table-summ">Кол-во упоминаний</li>
+          </ul>
+        </div>
+        <div class="container">
+        <ul class="statistic__table-percents ">
+          <li class="statistic__table-percent">0</li>
+          <li class="statistic__table-percent">25</li>
+          <li class="statistic__table-percent">50</li>
+          <li class="statistic__table-percent">75</li>
+          <li class="statistic__table-percent">100</li>
+        </ul>
+        </div>
+        <div class="statistic__analitic container">
+          <ul class="statistic__analitic-dates">
+            <li class="statistic__analitic-date">19, пн</li>
+            <li class="statistic__analitic-date">20, вт</li>
+            <li class="statistic__analitic-date">21, ср</li>
+            <li class="statistic__analitic-date">22, чт</li>
+            <li class="statistic__analitic-date">23, пт</li>
+            <li class="statistic__analitic-date">24, сб</li>
+            <li class="statistic__analitic-date">25, вс</li>
+          </ul>
+          <ul class="statistic__analitic-percents">
+            <li class="statistic__analitic-percent" style="width:15%"><span class="statistic__analitic-digit">15</span></li>
+            <li class="statistic__analitic-percent" style="width: 18%"><span class="statistic__analitic-digit">18</span></li>
+            <li class="statistic__analitic-percent" style="width: 11%"><span class="statistic__analitic-digit">11</span></li>
+            <li class="statistic__analitic-percent" style="width: 39%"><span class="statistic__analitic-digit">39</span></li>
+            <li class="statistic__analitic-percent" style="width: 45%"><span class="statistic__analitic-digit">45</span></li>
+            <li class="statistic__analitic-percent" style="width: 73%"><span class="statistic__analitic-digit">73</span></li>
+            <li class="statistic__analitic-percent" style="width: 34%"><span class="statistic__analitic-digit">34</span></li>
+           
+          </ul>
+        </div>
+
+        <ul class="statistic__table-percents container">
+          <li class="statistic__table-percent">0</li>
+          <li class="statistic__table-percent">25</li>
+          <li class="statistic__table-percent">50</li>
+          <li class="statistic__table-percent">75</li>
+          <li class="statistic__table-percent">100</li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer container">
+      <p class="footer__copyright">© 2020 NewsAnalyzer</p>
+      <nav class="footer__nav">
+        <ul class="footer__links">
+          <li class="footer__links-item">
+            <a class="footer__link" href="index.html">Главная</a>
+          </li>
+          <li class="footer__links-item">
+            <a class="footer__link" href="about.html">О проекте</a>
+          </li>
+          <li class="footer__links-item">
+            <a class="footer__link" target="_blank" href="https://praktikum.yandex.ru"
+              >Яндекс.Практикум</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <ul class="footer__social-links">
+        <li class="footer__social-link">
+          <a href="https://github.com/Zavizhenetc" target="_blank"
+            ><img
+              src="<%=require('../../images/github.png').default%>"
+              alt="лого Github"
+            />
+          </a>
+        </li>
+        <li class="footer__social-link">
+          <a href="https://www.facebook.com/alexandr.zavizhenec" target="_blank"
+            ><img
+              src="<%=require('../../images/fb.png').default%>"
+              alt="лого FB"
+              class=""
+          /></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
+  </body>
+</html>

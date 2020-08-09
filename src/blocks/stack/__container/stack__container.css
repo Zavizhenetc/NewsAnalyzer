@@ -1,0 +1,16 @@
+.stack__container {
+  display: flex;
+  padding: 2.5em;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1202px) {
+  .stack__container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 430px) {
+  .stack__container {
+    padding: 5%;
+    padding-top: 11%;
+  }
+}

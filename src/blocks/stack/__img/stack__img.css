@@ -1,0 +1,13 @@
+.stack__img {
+  padding-left: 2.5em;
+}
+@media screen and (max-width: 810px) {
+  .stack__img {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 430px) {
+  .stack__img {
+    padding-bottom: 9.6%;
+  }
+}

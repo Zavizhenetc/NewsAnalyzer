@@ -1,0 +1,30 @@
+@import url("./__logo/header__logo.css");
+@import url("./__link/header__link.css");
+@import url("./__links/header__links.css");
+@import url("./__link/_activ/header__link_activ.css");
+@import url("./__logo/_white/header__logo_white.css");
+@import url("./__link/_white/header__link_white.css");
+@import url("./__link/_activ-white/header__link_activ-white.css");
+
+.header {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c4c4c4;
+  padding: 0 7.2%;
+  align-items: center;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .header {
+    min-height: 64px;
+    padding: 0 5.2%;
+  }
+}
+@media screen and (max-width: 431px) {
+  .header {
+    min-height: 56px;
+  }
+}

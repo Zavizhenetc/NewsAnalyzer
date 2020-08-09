@@ -1,0 +1,17 @@
+.link {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  color: #1a1b22;
+  text-decoration: none;
+}
+.link:hover {
+  color: #b6bcbf;
+}
+@media screen and (max-width: 420px) {
+  .link {
+    padding-right: 18%;
+  }
+}

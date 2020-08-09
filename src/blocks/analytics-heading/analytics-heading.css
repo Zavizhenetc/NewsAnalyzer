@@ -1,0 +1,21 @@
+@import url("./__title/analytics-heading__title.css");
+@import url("./__text/analytic-heading__text.css");
+@import url("./__text-digit/analytic-heading__text-digit.css");
+
+.analytics-heading {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  padding: 2.9%;
+  padding-bottom: 5.6%;
+}
+@media screen and (max-width: 820px) {
+  .analytics-heading {
+    padding-top: 4.6%;
+  }
+}
+@media screen and (max-width: 410px) {
+  .analytics-heading {
+    padding-bottom: 9.6%;
+  }
+}

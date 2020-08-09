@@ -1,0 +1,24 @@
+.statistic__table-percents {
+  font-size: 12px;
+  line-height: 133%;
+  text-align: center;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #b6bcbf;
+  padding-left: 119px;
+  padding-right: 2%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2%;
+}
+@media screen and (max-width: 810px) {
+  .statistic__table-percents {
+    padding-left: 115px;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 410px) {
+  .statistic__table-percents {
+    display: none;
+  }
+}

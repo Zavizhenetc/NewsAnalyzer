@@ -1,0 +1,14 @@
+.analytic-heading__text {
+  font-size: 18px;
+  line-height: 133%;
+  color: #1a1b22;
+  margin: 0;
+  padding-left: 5.6em;
+  padding-left: 3.45em;
+  padding-top: 0.3em;
+}
+@media screen and (max-width: 820px) {
+  .analytic-heading__text {
+    padding-left: 2.3%;
+  }
+}

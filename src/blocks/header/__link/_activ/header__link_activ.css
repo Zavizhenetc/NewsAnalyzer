@@ -1,0 +1,20 @@
+.header__link_activ {
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 26%;
+}
+@media screen and (max-width: 768px) {
+  .header__link_activ {
+    padding-bottom: 20%;
+  }
+}
+@media screen and (max-width: 431px) {
+  .header__link_activ {
+    padding-bottom: 15%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .header__link_activ {
+    padding-bottom: 23%;
+  }
+}

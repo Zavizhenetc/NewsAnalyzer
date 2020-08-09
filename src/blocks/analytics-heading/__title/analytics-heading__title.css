@@ -1,0 +1,22 @@
+.analytics-heading__title {
+  font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 115%;
+  margin: 0;
+  padding-left: 4.55%;
+  margin-bottom: 1.35%;
+}
+@media screen and (max-width: 820px) {
+  .analytics-heading__title {
+    font-size: 32px;
+    line-height: 106%;
+    padding-left: 2.55%;
+    margin-bottom: 2.35%;
+  }
+}
+@media screen and (max-width: 524px) {
+  .analytics-heading__title {
+    font-size: 30px;
+    line-height: 113%;
+  }
+}

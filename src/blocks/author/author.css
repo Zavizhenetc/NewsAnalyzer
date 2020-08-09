@@ -1,0 +1,27 @@
+@import url("./__avatar/author__avatar.css");
+@import url("./__about/author__about.css");
+@import url("./__title/author__title.css");
+@import url("./__text/author__text.css");
+@import url("./__img-container/author__img-container.css");
+.author {
+  display: flex;
+  padding: 7.2%;
+  padding-top: 3.4%;
+  padding-bottom: 5%;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+@media screen and (max-width: 790px) {
+  .author {
+    padding-left: 5.2%;
+    padding-right: 5.2%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .author {
+    flex-direction: column;
+    display: flex;
+    padding-bottom: 26%;
+  }
+}

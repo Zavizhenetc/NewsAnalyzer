@@ -1,0 +1,14 @@
+.clients__title {
+  font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 115%;
+  margin: 0;
+  padding-top: 0.8em;
+}
+@media screen and (max-width: 810px) {
+  .clients__title {
+    font-size: 30px;
+    line-height: 113%;
+    padding-top: 1%;
+  }
+}

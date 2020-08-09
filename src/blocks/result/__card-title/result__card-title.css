@@ -1,0 +1,13 @@
+.result__card-title {
+  font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  line-height: 115%;
+  color: #1a1b22;
+  margin: 0;
+}
+@media screen and (max-width: 910px) {
+  .result__card-title {
+    font-size: 22px;
+    line-height: 113%;
+  }
+}

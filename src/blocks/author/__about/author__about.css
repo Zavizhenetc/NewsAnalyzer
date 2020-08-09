@@ -1,0 +1,15 @@
+.author__about {
+  padding-top: 6.5%;
+  margin-left: 4.5%;
+  padding-right: 6.5em;
+}
+@media screen and (max-width: 790px) {
+  .author__about {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 420px) {
+  .author__about {
+    margin: 0;
+  }
+}

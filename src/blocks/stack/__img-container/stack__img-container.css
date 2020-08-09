@@ -1,0 +1,18 @@
+.stack__img-container {
+  padding-right: 13%;
+  padding-top: 4%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 810px) {
+  .stack__img-container {
+    padding-top: 6%;
+    padding-right: 2.5%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .stack__img-container {
+    padding-top: 14%;
+  }
+}

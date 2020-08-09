@@ -1,0 +1,20 @@
+@import url("./__title/clients__title.css");
+@import url("./__text/clients__text.css");
+.clients {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  padding: 7%;
+  padding-top: 3%;
+}
+@media screen and (max-width: 810px) {
+  .clients {
+    padding: 3% 5% 7%;
+    padding-bottom: 6.3%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .clients {
+    padding-top: 5%;
+  }
+}

@@ -1,0 +1,19 @@
+.result__title {
+  font-size: 40px;
+  line-height: 115%;
+  color: #1a1b22;
+  font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+}
+@media screen and (max-width: 890px) {
+  .result__title {
+    margin: 0;
+    padding: 2% 0 2%;
+    font-size: 30px;
+    line-height: 113%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .result__title {
+    padding: 8% 0 6%;
+  }
+}
