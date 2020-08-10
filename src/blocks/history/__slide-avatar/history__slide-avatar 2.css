@@ -1,0 +1,20 @@
+.history__slide-avatar {
+  /* border-radius: 50%; */
+  max-width: 64px;
+  max-height: 64px;
+  object-fit: cover;
+  padding-top: 4.6%;
+  padding-left: 0.3%;
+}
+@media screen and (max-width: 810px) {
+  .history__slide-avatar {
+    max-width: 48px;
+    max-height: 48px;
+    padding-top: 7.6%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .history__slide-avatar {
+    padding-top: 4.6%;
+  }
+}

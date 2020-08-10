@@ -1,0 +1,8 @@
+.breadcrumbs__list-link {
+  text-decoration: none;
+  color: #1a1b22;
+  padding-left: 3px;
+}
+.breadcrumbs__list-link:hover {
+  opacity: 0.3;
+}
