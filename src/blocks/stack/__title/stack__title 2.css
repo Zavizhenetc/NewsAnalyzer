@@ -1,0 +1,23 @@
+.stack__title {
+  font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 115%;
+  padding-left: 1.6em;
+  padding-top: 1em;
+  margin: 0;
+  max-width: 20%;
+}
+@media screen and (max-width: 810px) {
+  .stack__title {
+    font-size: 30px;
+    line-height: 113%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .stack__title {
+    line-height: 133%;
+  }
+}

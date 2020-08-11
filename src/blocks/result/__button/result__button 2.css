@@ -1,0 +1,27 @@
+.result__button {
+  background: #ffffff;
+  border-radius: 80px;
+  min-height: 64px;
+  margin: 0 auto;
+  display: block;
+  width: 23.2%;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 2.75%;
+}
+.result__button:hover {
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(8, 29, 45, 0.1);
+  opacity: 0.9;
+}
+@media screen and (max-width: 1180px) {
+  .result__button {
+    min-height: 56px;
+    width: 240px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .result__button {
+    width: 287px;
+  }
+}

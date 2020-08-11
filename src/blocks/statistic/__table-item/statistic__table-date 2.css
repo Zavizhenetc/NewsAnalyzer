@@ -1,0 +1,9 @@
+.statistic__table-date {
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  display: inline;
+  color: #b6bcbf;
+  max-width: 5%;
+}

@@ -1,0 +1,24 @@
+.statistic__table-title {
+  list-style: none;
+  border-bottom: 1px solid #1a1b22;
+  margin: 0;
+  padding-top: 4%;
+  padding-bottom: 0.835em;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-gap: 35px;
+  padding-left: 0;
+  margin-left: 1.8%;
+  margin-right: 2%;
+}
+@media screen and (max-width: 810px) {
+  .statistic__table-title {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 410px) {
+  .statistic__table-title {
+    padding-bottom: 0.4em;
+    grid-gap: 10px;
+  }
+}

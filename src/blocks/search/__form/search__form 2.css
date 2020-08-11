@@ -1,0 +1,18 @@
+.search__form {
+  max-width: 608px;
+  min-height: 56px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 160px;
+}
+@media screen and (max-width: 710px) {
+  .search__form {
+    max-width: 59%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 420px) {
+  .search__form {
+    max-width: 90%;
+  }
+}
