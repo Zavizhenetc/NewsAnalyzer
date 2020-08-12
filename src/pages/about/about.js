@@ -1,2 +1,2 @@
 import "./about.css";
-import "./swiper.js";
+import "../../vendor/swiper.js";

@@ -12,8 +12,8 @@
 @import url("../../blocks/main/main.css");
 
 
-@import url("./swiper-bundle.css");
-@import url("./swiper.css");
+@import url("../../vendor/swiper-bundle.css");
+@import url("../../vendor/swiper.css");
 
 .root {
   box-sizing: border-box;
