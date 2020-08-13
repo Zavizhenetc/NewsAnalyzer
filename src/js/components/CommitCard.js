@@ -3,7 +3,7 @@ export class CommitCard {
 
   constructor(data, template){
     this.name = data.commit.committer.name;
-    // this.link = data.author.avatar_url;
+    this.link = data.author.avatar_url;
     // this.date = date;
     this.text = data.commit.message;
     this.email = data.commit.committer.email;
@@ -20,6 +20,7 @@ export class CommitCard {
     this.container.querySelector(".history__slide-text").textContent = this.text;
     this.container.querySelector(".history__slide-email").textContent = this.email;
     // this.container.querySelector(".history__slide-avatar").style.backgroundImage = `url(${this.link})`;
+    this.container.querySelector(".history__slide-avatar").setAttribute ("src", `${this.link}`);
 
     // this.setEventListeners();
     return this.container;
