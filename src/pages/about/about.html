@@ -123,12 +123,39 @@
       <section class="history">
         <div class="history__header container">
           <h2 class="history__title">История коммитов из GitHub</h2>
-          <a href="https://github.com/Zavizhenetc/NewsAnalyzer" target="_blank" class="history__link"
-            >Открыть в Github <span class="history__link-arrow">&#8250;</span></a
+          <a
+            href="https://github.com/Zavizhenetc/NewsAnalyzer"
+            target="_blank"
+            class="history__link"
+            >Открыть в Github
+            <span class="history__link-arrow">&#8250;</span></a
           >
         </div>
         <div class="container swiper-container">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper places-list">
+            <template id="swiper-slide" class="swiper-slide" >
+              <a href="https://github.com/Zavizhenetc/NewsAnalyzer" target="_blank" class="swiper-slide"
+              >
+                <p class="history__slide-date">14 августа, 2019</p>
+                <div class="history__container">
+                  <img
+                    src="<%= require('../../images/avatar.jpg').default%>"
+                    alt="Автор "
+                    class="history__slide-avatar"
+                  />
+                  <div class="history__title-container">
+                    <h3 class="history__slide-title">Инга Иванова</h3>
+                    <p class="history__slide-email">ingaiva@yandex.ru</p>
+                  </div>
+                </div>
+                <p class="history__slide-text">
+                  With Emmet, you can type CSS-like expressions that can be
+                  dynamically parsed, and produce output depending on what you
+                  type in the abb...
+                </p>
+              </a>
+            </template>
+            <!-- 
             <a
               href="https://github.com/Zavizhenetc/NewsAnalyzer"
               target="_blank"
@@ -220,38 +247,18 @@
                 dynamically parsed, and produce output depending on what you
                 type in the abb...
               </p>
-            </a>
-            <a
-              href="https://github.com/Zavizhenetc/NewsAnalyzer"
-              target="_blank"
-              class="swiper-slide"
-            >
-              <p class="history__slide-date">14 августа, 2019</p>
-              <div class="history__container">
-                <img
-                  src="<%= require('../../images/avatar.jpg').default%>"
-                  alt="Автор "
-                  class="history__slide-avatar"
-                />
-                <div class="history__title-container">
-                  <h3 class="history__slide-title">Инга Иванова</h3>
-                  <p class="history__slide-email">ingaiva@yandex.ru</p>
-                </div>
-              </div>
-              <p class="history__slide-text">
-                With Emmet, you can type CSS-like expressions that can be
-                dynamically parsed, and produce output depending on what you
-                type in the abb...
-              </p>
-            </a>
+            </a> -->
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
         <div class="container swiper-pagination"></div>
-        <a href="https://github.com/Zavizhenetc/NewsAnalyzer" target="_blank" class="button history__button"
-            >Открыть в Github</a
-          >
+        <a
+          href="https://github.com/Zavizhenetc/NewsAnalyzer"
+          target="_blank"
+          class="button history__button"
+          >Открыть в Github</a
+        >
         <!-- <button class="button history__button">Открыть в GitHub</button> -->
       </section>
     </main>
@@ -267,7 +274,10 @@
             <a class="footer__link" href="about.html">О проекте</a>
           </li>
           <li class="footer__links-item">
-            <a class="footer__link" target="_blank" href="https://praktikum.yandex.ru"
+            <a
+              class="footer__link"
+              target="_blank"
+              href="https://praktikum.yandex.ru"
               >Яндекс.Практикум</a
             >
           </li>
