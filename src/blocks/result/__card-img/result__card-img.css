@@ -2,16 +2,17 @@
   overflow: hidden;
   object-fit: cover;
   max-width: 400px;
+  max-height: 272px;
   border-radius: 16px 16px 0 0;
   width: 100%;
 }
 @media screen and (max-width: 761px) {
   .result__card-img {
-    max-height: 152px;
+    height: 150px;
   }
 }
 @media screen and (max-width: 653px) {
   .result__card-img {
-    max-height: 196px;
+    height: 196px;
   }
 }

@@ -1,66 +1,29 @@
-
-export class CommitCard {
-
-  constructor(data, template){
+export default class CommitCard {
+  constructor(data, TEMPLATE) {
     this.name = data.commit.committer.name;
     this.link = data.author.avatar_url;
-    // this.date = date;
+    this.date = data.commit.committer.date;
     this.text = data.commit.message;
     this.email = data.commit.committer.email;
-    this.template = template;
-    // this.res = res;
-   
+    this.TEMPLATE = TEMPLATE;
 
+  
+  }
+  _commitDate() {
+    return new Date(this.date).toLocaleString('ru', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
   }
 
-  createCard() {
-    this.container = this.template.cloneNode(true);
-    // this.container.querySelector(".history__slide-date").textContent = this.date;
-    this.container.querySelector(".history__slide-title").textContent = this.name;
-    this.container.querySelector(".history__slide-text").textContent = this.text;
-    this.container.querySelector(".history__slide-email").textContent = this.email;
-    // this.container.querySelector(".history__slide-avatar").style.backgroundImage = `url(${this.link})`;
-    this.container.querySelector(".history__slide-avatar").setAttribute ("src", `${this.link}`);
-
-    // this.setEventListeners();
+  createСommitCard() {
+    this.container = this.TEMPLATE.cloneNode(true);
+    this.container.querySelector('.history__slide-date').textContent = this._commitDate();
+    this.container.querySelector('.history__slide-title').textContent = this.name;
+    this.container.querySelector('.history__slide-text').textContent = this.text;
+    this.container.querySelector('.history__slide-email').textContent = this.email;
+    this.container.querySelector('.history__slide-avatar').setAttribute('src', `${this.link}`);
     return this.container;
   }
- 
-
-
-  // like(event) {
-  //   event.target.classList.toggle("place-card__like-icon_liked");
-
-  // }
-
-  // remove() {
-  //   this.container.remove();
- 
-  // }
- 
-  // openImage = ()=> {
-  //   this.openPicturesCall(this.link);
-  // };
-
-  // setEventListeners() {
-  //   this.container.addEventListener("click", (event) => {
-  //     if (event.target.classList.contains("place-card__like-icon")) {
-  //       this.like(event);
-  //     }
-  //     if (event.target.classList.contains("place-card__delete-icon")) {
-
-  //       this.remove(event);
-  //     }
-  //     if (event.target.classList.contains("place-card__image")) {
-
-  //       this.openImage(this.link);
-  //     }
-  //   });
-  // }
-  
-  
 }
-
-
-
-

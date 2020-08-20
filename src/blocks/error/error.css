@@ -1,0 +1,19 @@
+ 
+ .error {
+  font-family: Roboto,Arial,Helvetica,sans-serif;
+  position: absolute;
+  border-radius: 10px;
+  left: 20%;
+  font-size: 15px;
+  /* background-color: #d81c25; */
+  line-height: 14px;
+  text-align: center;
+  padding: 5px;
+  /* color: #eff6ff; */
+  color: #dc0000;
+  display: none;
+  margin: 4px 0 0 6px;
+  box-sizing: border-box;
+  height: 25px;
+  margin-bottom: 20px;
+}

@@ -1,34 +1,32 @@
-function log(elem) {
-  console.log(elem);
-}
-import "./about.css";
-import "../../vendor/swiper.js";
-import { GitHubApi } from "../../js/modules/GithubApi.js";
-import { CONFIG } from "../../js/constants/constans.js";
-import { CardList } from "../../js/components/CommitCardList.js";
-import { CommitCard } from "../../js/components/CommitCard.js";
+// function log(elem) {
+//   console.log(elem);
+// }
+
+import './about.css';
+import {swiper} from '../../vendor/swiper.js';
+import  GitHubApi  from '../../js/modules/GithubApi.js';
+import { CONFIG_GITHUB,  COMMIT_PLACES_LIST  } from '../../js/constants/constans.js';
+import  CardList  from '../../js/components/CommitCardList.js';
+import CommitCard from '../../js/components/CommitCard.js';
+
+
+const commitTemplate = document.querySelector('#swiper-slide').content.querySelector('.swiper-slide');
+
+
+const gitHubApi = new GitHubApi (CONFIG_GITHUB);
+const cardList = new CardList(COMMIT_PLACES_LIST);
 
 
 
-const commitPlacesList = document.querySelector(".places-list");
-
-const gitHubApi = new GitHubApi(CONFIG);
-// const gitHubApi = new GitHubApi();
-const cardList = new CardList(commitPlacesList);
-
-const template = document
-  .querySelector("#swiper-slide")
-  .content.querySelector(".swiper-slide");
-
-gitHubApi
-  .getGithubCommits()
+gitHubApi.getGithubCommits()
   .then((res) => {
     // console.log(res);
-    const basicCommits = res.map((data, res) => {
-      return new CommitCard(data, template).createCard();
+    const commits = res.map((data) => {
+      return new CommitCard(data, commitTemplate).createСommitCard();
     });
-    cardList.render(basicCommits);
+    cardList.render(commits);
+    swiper.updateSlides();
   })
   .catch((err) => {
-    console.log(`Без паники ! это всего лишь ошибка ${err} `);
+    alert(`Без паники ! это всего лишь ошибка ${err} `);
   });

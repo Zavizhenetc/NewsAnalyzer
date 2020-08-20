@@ -1,0 +1,7 @@
+.search__button_invalid
+{ 
+  background: #347eff;
+  opacity: 0.3;
+  /* display: none; */
+  pointer-events: none;
+}

@@ -1,15 +1,15 @@
-@import url("./__title/statistic__title.css");
-@import url("./__table-title/statistic__table-title.css");
-@import url("./__table-percent/statistic__table-percent.css");
-@import url("./__table-item/statistic__table-date.css");
-@import url("./__table-summ/statistic__table-summ.css");
-@import url("./__table-percents/statistic__table-percents.css");
-@import url("./__analitic-dates/statistic__analitic-dates.css");
-@import url("./__analitic-date/statistic__analitic-date.css");
-@import url("./__analitic/statistic__analitic.css");
-@import url("./__analitic-percents/statistic__analitic-percents.css");
-@import url("./__analitic-percent/statistic__analitic-percent.css");
-@import url("./__analitic-digit/statistic__analitic-digit.css");
+@import url('./__title/statistic__title.css');
+@import url('./__table-title/statistic__table-title.css');
+@import url('./__table-percent/statistic__table-percent.css');
+@import url('./__table-item/statistic__table-date.css');
+@import url('./__table-summ/statistic__table-summ.css');
+@import url('./__table-percents/statistic__table-percents.css');
+@import url('./__analitic-dates/statistic__analitic-dates.css');
+@import url('./__analitic-date/statistic__analitic-date.css');
+@import url('./__analitic/statistic__analitic.css');
+@import url('./__analitic-percents/statistic__analitic-percents.css');
+@import url('./__analitic-percent/statistic__analitic-percent.css');
+@import url('./__analitic-digit/statistic__analitic-digit.css');
 
 .statistic {
   background-color: #f5f6f7;

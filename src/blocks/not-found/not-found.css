@@ -1,5 +1,5 @@
-@import url("./__title/not-found__title.css");
-@import url("./__text/not-found__text.css");
+@import url('./__title/not-found__title.css');
+@import url('./__text/not-found__text.css');
 .not-found {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: normal;

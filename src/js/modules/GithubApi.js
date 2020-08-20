@@ -1,11 +1,11 @@
-export class GitHubApi {
+export default class GitHubApi {
   constructor (config){
     this.baseUrl = config.baseUrl;
   
   }
 getGithubCommits() {
   return fetch(`${this.baseUrl}/repos/Zavizhenetc/NewsAnalyzer/commits`, {
-  // return fetch("https://api.github.com/repos/Zavizhenetc/NewsAnalyzer/commits", {
+  // return fetch('https://api.github.com/repos/Zavizhenetc/NewsAnalyzer/commits', {
   })
   .then((res)=>  this._getResponseData(res));
   
