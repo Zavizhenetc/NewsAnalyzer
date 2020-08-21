@@ -70,6 +70,7 @@ function moreCardsShow(count) {
   newsList.render(newsSlice);
   PRELOADER.style.display = 'none';
   window.count = newsSlice.length;
+ 
 }
 
 // считаем количество новостей для доп рендера

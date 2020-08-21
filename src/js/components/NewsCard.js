@@ -23,6 +23,7 @@ export default class NewsCard {
       this.container
         .querySelector('.result__card-img')
         .setAttribute('src', `src/images/404_page.png`);
+        // .setAttribute('src', `src/images/404_page1.png`);
     } else {
       this.container
         .querySelector('.result__card-img')
