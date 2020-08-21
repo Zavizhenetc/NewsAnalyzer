@@ -6,7 +6,7 @@ export default class NewsCard {
     this.title = data.title;
     this.text = data.description;
     this.name = data.source.name;
-    this.TEMPLATE = TEMPLATE;
+    this.template = TEMPLATE;
     this.data = data;
   }
   _newsDate() {
@@ -18,7 +18,7 @@ export default class NewsCard {
   }
 
   createNewsCard() {
-    this.container = this.TEMPLATE.cloneNode(true);
+    this.container = this.template.cloneNode(true);
     if (this.img === null) {
       this.container
         .querySelector('.result__card-img')

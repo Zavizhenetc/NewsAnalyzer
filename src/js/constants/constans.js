@@ -32,10 +32,20 @@ const REQUEST = document.getElementById('search');
 
 // неделя для ньюсАпи
 const NOW = new Date();
-console.log(NOW);
+// console.log(NOW);
 const WEEK = new Date();
-WEEK.setDate(NOW.getDate()+7); 
-console.log(WEEK);
+WEEK.setDate(NOW.getDate()-7); 
+// console.log(WEEK);
+
+//неделя для статистики
+// const NOW = new Date();
+// console.log(NOW);
+// const WEEK = new Date();
+// WEEK.setDate(NOW.getDate()-7); 
+// console.log(WEEK);
+// const weekForStatistics =[NOW -WEEK.setDate(NOW.getDate()-7)]; 
+// console.log(weekForStatistics);
+
 
 // конфиг для ньюсАпи
 const CONFIG_NEWS = {

@@ -14,6 +14,7 @@ export default class CommitCard {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
+      
     });
   }
 

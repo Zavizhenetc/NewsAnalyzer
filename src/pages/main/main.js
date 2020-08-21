@@ -31,7 +31,9 @@ SEARCH_BUTTON.addEventListener('submit', getRender);
 // слушаем кнопку 'показать еще'
 MORE_NEWS_BUTTON.addEventListener('click', () => {
   moreCardsShow(count());
+  blockMoreNewsButton(count());
 });
+
 
 
 
@@ -40,6 +42,7 @@ MORE_NEWS_BUTTON.addEventListener('click', () => {
 function getStorageNews() {
   setStyleBlock(PRELOADER); //отображаем спинер
   let storageNews = storage.getNewsCards();
+  console.log(count());
 
   if (storageNews.length == 0) {
     setStyleBlock(NOT_FOUND); // отображаем грустный смайл 
@@ -72,8 +75,16 @@ function moreCardsShow(count) {
   window.count = newsSlice.length;
  
 }
+//убираем кнопку еще
+function blockMoreNewsButton(count){
+  let storageNews = storage.getNewsCards();
+  if (storageNews.length == window.count)
+  {
+    setStyleNone (MORE_NEWS_BUTTON);
+  }
+}
 
-// считаем количество новостей для доп рендера
+// считаем количество новостей 
 function count() {
   let count = window.count;
   // console.log(count);
@@ -83,12 +94,11 @@ function count() {
   return count + 3;
 }
 
-
-
 // получаем и отрисовываем новости из локал если запрос  в локалсторедж. Нет - отправляем запрос и отрисовываем 3 карточки
 function getRender(event) {
   event.preventDefault();
   window.count = 0;
+ 
   let storageRequest = storage.getRequest();
   if (REQUEST.value === storageRequest) {
     getStorageNews();
@@ -97,6 +107,7 @@ function getRender(event) {
     newsList.remove();
     getApiNews();
   }
+  setStyleBlock(MORE_NEWS_BUTTON)
 }
 
 // получаем новости по запросу
