@@ -51,8 +51,6 @@ export default class SearchInput {
 
     if (state) {
       this.button.classList.remove('search__button_invalid');
-
-      // this.button.removeAttribute('disabled');
     } else {
       this.span.style.display = 'block';
       this.button.classList.add('search__button_invalid');

@@ -33,19 +33,10 @@ const REQUEST = document.getElementById('search');
 // неделя для ньюсАпи
 const NOW = new Date();
 // console.log(NOW);
+const SEVEN = 7;
 const WEEK = new Date();
-WEEK.setDate(NOW.getDate()-7); 
-// console.log(WEEK);
-
-//неделя для статистики
-// const NOW = new Date();
-// console.log(NOW);
-// const WEEK = new Date();
-// WEEK.setDate(NOW.getDate()-7); 
-// console.log(WEEK);
-// const weekForStatistics =[NOW -WEEK.setDate(NOW.getDate()-7)]; 
-// console.log(weekForStatistics);
-
+WEEK.setDate(NOW.getDate()-SEVEN); 
+console.log(WEEK);
 
 // конфиг для ньюсАпи
 const CONFIG_NEWS = {
@@ -53,11 +44,12 @@ const CONFIG_NEWS = {
   baseUrl: `${_BASE_URL_NEWS}`,
     newsToken: '46363efe5d454868911d4a048693588b',
     pageSize: '100',
-    from: NOW,
-    to: WEEK,
+    from: NOW.toISOString().slice(0, 10),
+    to: WEEK.toISOString().slice(0, 10),
     language: 'ru',
     sortBy:'publishedAt',
 };
+
 
  
 

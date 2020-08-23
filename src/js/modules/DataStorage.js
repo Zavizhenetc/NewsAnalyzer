@@ -2,6 +2,9 @@ export default class DataStorage{
   constructor(){
 
   }
+  setTotalResults(totalResults){
+    localStorage.setItem ('totalResults', JSON.stringify(totalResults))
+  }
 
   setNews(news){
     localStorage.setItem ('news',JSON.stringify(news))
@@ -15,6 +18,11 @@ export default class DataStorage{
     //  return localStorage.getItem('news');
      return JSON.parse(localStorage.getItem('news'));
 
+  }
+ 
+  getTotalResult(){
+    // return JSON.parse(localStorage.getItem('totalResults'));
+    return localStorage.getItem('totalResults');
   }
   
   getRequest(){

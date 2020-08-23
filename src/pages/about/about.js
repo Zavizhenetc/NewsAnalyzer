@@ -1,6 +1,4 @@
-// function log(elem) {
-//   console.log(elem);
-// }
+
 
 import './about.css';
 import {swiper} from '../../vendor/swiper.js';
@@ -20,7 +18,6 @@ const cardList = new CardList(COMMIT_PLACES_LIST);
 
 gitHubApi.getGithubCommits()
   .then((res) => {
-    // console.log(res);
     const commits = res.map((data) => {
       return new CommitCard(data, commitTemplate).createСommitCard();
     });

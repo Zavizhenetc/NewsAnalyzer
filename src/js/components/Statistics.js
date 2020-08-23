@@ -2,6 +2,7 @@ export default class Statistics {
   constructor(weekDays, template) {
     this.template = template;
     this.date = weekDays;
+    // this.width = getWidth
    
   }
 
@@ -12,15 +13,13 @@ export default class Statistics {
     return this.container;
 
   }
-  _addCard(card) {
-    this.container.append(card);
+
+  _addDay(elem) {
+    this.container.append(elem);
   }
   render(array) {
-    array.forEach((elem) => this._addCard(elem));
+    array.forEach((elem) => this._addDay(elem));
   }
-  // render(elem) {
-  //   this.elem = elem;
-  //   this.container.innerHTML = this.elem;
-  // }
+
 }
 

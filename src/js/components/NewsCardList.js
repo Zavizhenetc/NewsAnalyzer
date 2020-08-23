@@ -1,7 +1,6 @@
 export default class NewsCardList {
   constructor(container) {
     this.container = container;
-    // this.allNewsTwmplate = this.container.querySelectorAll('.result__card-link');
 
   }
 

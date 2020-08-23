@@ -1,6 +1,7 @@
 @import url('./__title/analytics-heading__title.css');
 @import url('./__text/analytic-heading__text.css');
 @import url('./__text-digit/analytic-heading__text-digit.css');
+@import url('./__subtitle-digit/analytic-heading__subtitle-digit.css');
 
 .analytics-heading {
   font-family: Roboto, Arial, Helvetica, sans-serif;

@@ -10,6 +10,8 @@
 @import url('./__analitic-percents/statistic__analitic-percents.css');
 @import url('./__analitic-percent/statistic__analitic-percent.css');
 @import url('./__analitic-digit/statistic__analitic-digit.css');
+@import url('./__table/statistic__table.css');
+@import url('./__analitic-bar/statistic__analitic-bar.css');
 
 .statistic {
   background-color: #f5f6f7;
