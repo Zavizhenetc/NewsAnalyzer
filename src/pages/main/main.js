@@ -30,7 +30,8 @@ SEARCH_BUTTON.addEventListener("click", () => {
 });
 
 
-getStorageNews(); // отображаем последний удачный запрос
+startPage();
+// getStorageNews();
 
 // слушаем кнопку 'искать'
 SEARCH_BUTTON.addEventListener("submit", getRender);
@@ -44,10 +45,12 @@ MORE_NEWS_BUTTON.addEventListener("click", () => {
 // получаем новости из сторедж
 function getStorageNews() {
   setStyleBlock(PRELOADER); //отображаем спинер
-  let storageNews = storage.getNewsCards();
-
-  if ((storageNews.length == 0)||(storageNews == null)) 
-  // if (storageNews.length == 0) 
+  const storageNews = storage.getNewsCards();
+  setStyleNone(PRELOADER); //убираем спинер
+  setStyleBlock(RESULT); // отображаем результаты
+  setStyleNone(NOT_FOUND); // убираем грустный смайл
+  // if ((storageNews.length == 0)||(storageNews == null)) 
+  if (storageNews.length == 0) 
   {
     setStyleBlock(NOT_FOUND); // отображаем грустный смайл
     setStyleNone(RESULT); // убираем результаты
@@ -67,7 +70,7 @@ function getStorageNews() {
 // добавляем еще новостей
 function moreCardsShow(count) {
   PRELOADER.style.display = "block";
-  let storageNews = storage.getNewsCards();
+  const storageNews = storage.getNewsCards();
   const newsCommit = storageNews.map((data) => {
     return new NewsCard(data, NEWS_TEMPLATE).createNewsCard();
   });
@@ -79,7 +82,7 @@ function moreCardsShow(count) {
 }
 //убираем кнопку еще
 function blockMoreNewsButton(count) {
-  let storageNews = storage.getNewsCards();
+  const storageNews = storage.getNewsCards();
   if (storageNews.length == window.count) {
     setStyleNone(MORE_NEWS_BUTTON);
   }
@@ -98,8 +101,7 @@ function count() {
 function getRender(event) {
   event.preventDefault();
   window.count = 0;
-
-  let storageRequest = storage.getRequest();
+  const storageRequest = storage.getRequest();
   if (REQUEST.value === storageRequest) {
     getStorageNews();
     FORM.reset();
@@ -129,7 +131,7 @@ export function getApiNews() {
         storage.setRequest(REQUEST);
         storage.setNews(res.articles);
         storage.setTotalResults(res.totalResults);
-        let storageNews = storage.getNewsCards();
+        const storageNews = storage.getNewsCards();
         const newsCommit = storageNews.map((data) => {
           return new NewsCard(data, NEWS_TEMPLATE).createNewsCard();
         });
@@ -145,4 +147,12 @@ export function getApiNews() {
     .catch((err) => {
       alert(`Без паники ! это всего лишь ошибка ${err} `);
     });
+}
+
+function startPage(){
+  const storageNews = storage.getNewsCards();
+  if (storageNews == null) {
+  }else{
+    getStorageNews();
+  }
 }

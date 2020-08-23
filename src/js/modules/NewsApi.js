@@ -12,9 +12,6 @@ export default class NewsApi {
   }
 
   getNews(request) {
-console.log(this.dateTo );
-console.log(this.dateFrom );
-
     return fetch(`${this.baseUrl}?apiKey=${this.newsToken}&from=${this.dateFrom}&to=${this.dateTo}&pageSize=${this.pageSize}&sortBy=${this.sortBy}&language=${this.lang}&q=${request}`, {
     }).then((res)=>  this._getResponseData(res));
   

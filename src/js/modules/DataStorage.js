@@ -17,7 +17,6 @@ export default class DataStorage{
   getNewsCards(){
     //  return localStorage.getItem('news');
      return JSON.parse(localStorage.getItem('news'));
-
   }
  
   getTotalResult(){

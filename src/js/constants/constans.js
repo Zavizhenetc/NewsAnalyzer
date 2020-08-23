@@ -1,5 +1,5 @@
 
-export { CONFIG_GITHUB, RESULT_CARDS, SEARCH_BUTTON, MORE_NEWS_BUTTON,  RESULT, PRELOADER, NOT_FOUND,  COMMIT_PLACES_LIST, CONFIG_NEWS, ERROR_MESAGES, FORM, REQUEST}
+export { CONFIG_GITHUB, RESULT_CARDS, SEARCH_BUTTON, MORE_NEWS_BUTTON,  RESULT, PRELOADER, NOT_FOUND,  COMMIT_PLACES_LIST, CONFIG_NEWS, ERROR_MESAGES, FORM, REQUEST, DAYS_CONTAINER, BARS_CONTAINER, ANALYTICS_TITLE,  ANALYTICS_MONTH, ANALYTICS_TOTAL_NEWS, ANALYTICS_TITLE_SUM}
 
 const  SEARCH_BUTTON = document.forms.searchForm;
 const  MORE_NEWS_BUTTON = document.querySelector('.result__button');
@@ -21,7 +21,7 @@ const ERROR_MESAGES = {
  const CONFIG_GITHUB = {
   baseUrl: `${_BASE_URL}api.github.com`
 };
-const _BASE_URL_NEWS = NODE_ENV === 'production' ? 'https://newsapi.org/v2/everything' : 'https://nomoreparties.co/news/v2/everything';
+const _BASE_URL_NEWS = NODE_ENV === 'production' ? 'https://nomoreparties.co/news/v2/everything' : 'https://nomoreparties.co/news/v2/everything';
 // const _BASE_URL_NEWS = NODE_ENV === 'production' ? 'https://newsapi.org/v2/everything' : 'http://praktikum.tk/news/v2/everything';
 
 const FORM = document.querySelector('.search__form');
@@ -50,6 +50,15 @@ const CONFIG_NEWS = {
     sortBy:'publishedAt',
 };
 
-
+const  DAYS_CONTAINER= document.querySelector(".statistic__analitic-dates");
+const  BARS_CONTAINER = document.querySelector(".statistic__analitic-percents");
+const  ANALYTICS_TITLE = document.querySelector(".analytics-heading__title");
+const  ANALYTICS_MONTH = document.querySelector(".statistic__table-date");
+const  ANALYTICS_TOTAL_NEWS = document.querySelector(
+  ".analytic-heading__text-digit"
+);
+const  ANALYTICS_TITLE_SUM= document.querySelector(
+  ".analytic-heading__subtitle-digit"
+);
  
 
