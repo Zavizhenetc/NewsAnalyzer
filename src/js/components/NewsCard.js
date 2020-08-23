@@ -29,7 +29,7 @@ export default class NewsCard {
         .querySelector('.result__card-img')
         .setAttribute('src', `${this.img}`);
     }
-    // this.container.querySelector('.result__card-img').setAttribute('src', `${this.img}`);
+    this.container.querySelector('.result__card-img').setAttribute('src', `${this.img}`);
     this.container
       .querySelector('.result__card-link')
       .setAttribute('href', `${this.link}`);
