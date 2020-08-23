@@ -95,9 +95,9 @@ const arrForBars = datIso.map((day) => {
 function getWidth(array) {
   return array.map((data) => {
     // const total = totalSubtitle(request);
-    let total = storage.getTotalResult(request);
+    const total = storage.getTotalResult(request);
 
-    return Math.round((data / total) * 100 );
+    return Math.round((data * 100 )/ total );
   });
 }
 const width = getWidth(arrForBars);
