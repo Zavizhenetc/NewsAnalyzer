@@ -1,10 +1,10 @@
-import "./main.css";
-import NewsApi from "../../js/modules/NewsApi.js";
-import SearchInput from "../../js/components/SearchInput.js";
-import DataStorage from "../../js/modules/DataStorage.js";
-import NewsCard from "../../js/components/NewsCard.js";
-import NewsCardList from "../../js/components/NewsCardList.js";
-import { setStyleNone, setStyleBlock } from "../../js/utils/utils.js";
+import './main.css';
+import NewsApi from '../../js/modules/NewsApi.js';
+import SearchInput from '../../js/components/SearchInput.js';
+import DataStorage from '../../js/modules/DataStorage.js';
+import NewsCard from '../../js/components/NewsCard.js';
+import NewsCardList from '../../js/components/NewsCardList.js';
+import { setStyleNone, setStyleBlock } from '../../js/utils/utils.js';
 import {
   SEARCH_BUTTON,
   RESULT_CARDS,
@@ -15,8 +15,8 @@ import {
   CONFIG_NEWS,
   FORM,
   REQUEST,
-} from "../../js/constants/constans.js";
-const NEWS_TEMPLATE = document.querySelector(".result__template").content;
+} from '../../js/constants/constans.js';
+const NEWS_TEMPLATE = document.querySelector('.result__template').content;
 const newsApi = new NewsApi(CONFIG_NEWS); //
 export const storage = new DataStorage();
 export const newsList = new NewsCardList(RESULT_CARDS);
@@ -24,7 +24,7 @@ const validationForm = new SearchInput(FORM);
 
 // валидируем инпут
 validationForm.setEventListenersValidation();
-SEARCH_BUTTON.addEventListener("click", () => {
+SEARCH_BUTTON.addEventListener('click', () => {
   validationForm.resetError();
   validationForm.setSubmitButtonState(false);
 });
@@ -34,10 +34,10 @@ startPage();
 // getStorageNews();
 
 // слушаем кнопку 'искать'
-SEARCH_BUTTON.addEventListener("submit", getRender);
+SEARCH_BUTTON.addEventListener('submit', getRender);
 
 // слушаем кнопку 'показать еще'
-MORE_NEWS_BUTTON.addEventListener("click", () => {
+MORE_NEWS_BUTTON.addEventListener('click', () => {
   moreCardsShow(count());
   blockMoreNewsButton(count());
 });
@@ -69,7 +69,7 @@ function getStorageNews() {
 
 // добавляем еще новостей
 function moreCardsShow(count) {
-  PRELOADER.style.display = "block";
+  PRELOADER.style.display = 'block';
   const storageNews = storage.getNewsCards();
   const newsCommit = storageNews.map((data) => {
     return new NewsCard(data, NEWS_TEMPLATE).createNewsCard();
@@ -77,7 +77,7 @@ function moreCardsShow(count) {
   const newsSlice = newsCommit.slice(0, count);
   newsList.remove();
   newsList.render(newsSlice);
-  PRELOADER.style.display = "none";
+  PRELOADER.style.display = 'none';
   window.count = newsSlice.length;
 }
 //убираем кнопку еще

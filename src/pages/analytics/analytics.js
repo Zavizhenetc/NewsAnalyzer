@@ -1,17 +1,17 @@
-import "./analytics.css";
-import Statistics from "../../js/components/Statistics.js";
-import Statisticsbars from "../../js/components/Statisticsbars.js";
-import NewsCardList from "../../js/components/NewsCardList.js";
-import DataStorage from "../../js/modules/DataStorage.js";
-import { DAYS_CONTAINER, BARS_CONTAINER, ANALYTICS_TITLE,  ANALYTICS_MONTH, ANALYTICS_TOTAL_NEWS, ANALYTICS_TITLE_SUM} from "../../js/constants/constans.js";
+import './analytics.css';
+import Statistics from '../../js/components/Statistics.js';
+import Statisticsbars from '../../js/components/Statisticsbars.js';
+import NewsCardList from '../../js/components/NewsCardList.js';
+import DataStorage from '../../js/modules/DataStorage.js';
+import { DAYS_CONTAINER, BARS_CONTAINER, ANALYTICS_TITLE,  ANALYTICS_MONTH, ANALYTICS_TOTAL_NEWS, ANALYTICS_TITLE_SUM} from '../../js/constants/constans.js';
 
-const analiticDaysTemplate = document.getElementById("analiticDayTemplate")
+const analiticDaysTemplate = document.getElementById('analiticDayTemplate')
   .content;
 
-const month = new Date().toLocaleString("ru", {
-  month: "long",
+const month = new Date().toLocaleString('ru', {
+  month: 'long',
 });
-const analyticsBarsTemplate = document.getElementById("analiticBarTemplate")
+const analyticsBarsTemplate = document.getElementById('analiticBarTemplate')
   .content;
 
 const storage = new DataStorage();
@@ -28,9 +28,9 @@ for (let i = 0; i < 7; i++) {
 }
 // готовим массив к рендеру
 const weekDays = dates.map((day) => {
-  return new Date(day).toLocaleString("ru", {
-    day: "numeric",
-    weekday: "short",
+  return new Date(day).toLocaleString('ru', {
+    day: 'numeric',
+    weekday: 'short',
   });
 });
 // cобираем массив с заголовками

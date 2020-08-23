@@ -50,15 +50,15 @@ const CONFIG_NEWS = {
     sortBy:'publishedAt',
 };
 
-const  DAYS_CONTAINER= document.querySelector(".statistic__analitic-dates");
-const  BARS_CONTAINER = document.querySelector(".statistic__analitic-percents");
-const  ANALYTICS_TITLE = document.querySelector(".analytics-heading__title");
-const  ANALYTICS_MONTH = document.querySelector(".statistic__table-date");
+const  DAYS_CONTAINER= document.querySelector('.statistic__analitic-dates');
+const  BARS_CONTAINER = document.querySelector('.statistic__analitic-percents');
+const  ANALYTICS_TITLE = document.querySelector('.analytics-heading__title');
+const  ANALYTICS_MONTH = document.querySelector('.statistic__table-date');
 const  ANALYTICS_TOTAL_NEWS = document.querySelector(
-  ".analytic-heading__text-digit"
+  '.analytic-heading__text-digit'
 );
 const  ANALYTICS_TITLE_SUM= document.querySelector(
-  ".analytic-heading__subtitle-digit"
+  '.analytic-heading__subtitle-digit'
 );
  
 
