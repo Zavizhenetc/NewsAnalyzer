@@ -41,8 +41,6 @@ const arr = storage.getNewsCards().filter(function(elem) {
 });
 
 
-console.log(arr);
-
 const newArrTitle = arr.map((data) => {
   return data.title;
 });
@@ -79,7 +77,6 @@ function widthCalculate(day) {
   return arr.filter((data) => {
     const title = data.title.toLowerCase();
     const description = data.description.toLowerCase();
-    console.log(title);
     if (
       // (data.title.includes(request)) || (data.title.includes(header)) || (data.description.includes(request)) || (data.description.includes(header))
       (title.includes(request))  || (description.includes(request)) 
@@ -93,7 +90,6 @@ function widthCalculate(day) {
 const arrForBars = datIso.map((day) => {
   return widthCalculate(day);
 });
-console.log(arrForBars);
 
 //высчитываем  %  для бара
 function getWidth(array) {
