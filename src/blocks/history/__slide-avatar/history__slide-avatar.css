@@ -1,10 +1,10 @@
 .history__slide-avatar {
-  /* border-radius: 50%; */
+  border-radius: 50%;
   max-width: 64px;
   max-height: 64px;
   object-fit: cover;
-  padding-top: 4.6%;
-  padding-left: 0.3%;
+  margin-top: 4.6%;
+  margin-left: 0.3%;
 }
 @media screen and (max-width: 810px) {
   .history__slide-avatar {

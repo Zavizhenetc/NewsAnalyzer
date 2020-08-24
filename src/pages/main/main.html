@@ -7,7 +7,7 @@
     <title>NewsAnalyzer</title>
     <link
       rel="shortcut icon"
-      href="<%= require('../../images/favicon.ico').default %> "
+      href="<%= require("../../images/favicon.ico").default %> "
       type="image/x-icon"
     />
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>" />
@@ -39,140 +39,76 @@
             Введите в поиске любую тему и узнайте, насколько популярной она была
             в новостях за прошедшую неделю.
           </h2>
-          <form name="search-form" class="search__form">
+          <form name="searchForm" class="search__form">
             <input
               type="text"
               class="search__input"
               id="search"
-              name="search-input"
+              name="searchInput"
               placeholder="Введите тему новости"
               required
+              minlength="2"
+              maxlength="30"
             />
             <span id="search-error" class="error"></span>
-            <button class="button search__button">Искать</button>
+            <button type="submit" class="button search__button"  >Искать</button>
           </form>
         </div>
       </section>
       <!--   спинер  -->
-      <section class="preloader">
-      <div class="container">
-        <i class="preloader__circle"></i>
-        <p class="preloader__text">Идет поиск новостей...</p>
-      </div>
+      <section class="preloader" style="display: none;">
+        <div class="container">
+          <i class="preloader__circle"></i>
+          <p class="preloader__text">Идет поиск новостей...</p>
+        </div>
       </section>
       <!-- не найдено  -->
-      <section class="not-found">
-      <div class="container">
-        <img
-          src="<%=require('../../images/sadSmile.png').default%>"
-          alt="Грустный смайл"
-          class="not-found__img"
-        />
-        <h2 class="not-found__title">Ничего не найдено</h2>
-        <p class="not-found__text">
-          К сожалению по вашему запросу ничего не найдено.
-        </p>
-      </div>
+      <section class="not-found" style="display: none;">
+        <div class="container">
+          <img
+            src="<%=require("../../images/sadSmile.png").default%>"
+            alt="Грустный смайл"
+            class="not-found__img"
+          />
+          <h2 class="not-found__title">Ничего не найдено</h2>
+          <p class="not-found__text">
+            К сожалению по вашему запросу ничего не найдено.
+          </p>
+        </div>
       </section>
       <!-- результаты поиска -->
       <section class="result">
         <div class="container result__info">
           <h2 class="result__title">Результаты поиска</h2>
           <a href="analytics.html" class="result__link"
-            >Посмотреть аналитику <span class="result__link-arrow">&#8250;</span>
+            >Посмотреть аналитику
+            <span class="result__link-arrow">&#8250;</span>
           </a>
         </div>
-        <div class="container result__cards">
-          <a href="#" class="result__card-link">
-            <img
-              src="<%=require('../../images/card_bg.png').default%>"
-              alt="Фото заголовка"
-              class="result__card-img"
-            />
-            <div class="result__card-description">
-              <p class="result__date">2 августа 2020</p>
-              <h3 class="result__card-title">Национальное достояние – парки</h3>
-              <p class="result__card-text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых
-                территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-              <p class="result__card-source-link">Лента.ру</p>
-            </div>
-          </a>
-          <a href="#" class="result__card-link">
-            <img
-              src="<%=require('../../images/card_bg.png').default%>"
-              alt="Фото заголовка"
-              class="result__card-img"
-            />
-            <div class="result__card-description">
-              <p class="result__date">2 августа 2020</p>
-              <h3 class="result__card-title">
-                Лесные огоньки: история одной фотографии
-              </h3>
-              <p class="result__card-text">
-                Фотограф отвлеклась от освещения суровой политической реальности
-                Мексики, чтобы запечатлеть ускользающую красоту одного из
-                местных чудес природы.
-              </p>
-              <p class="result__card-source-link">Медуза</p>
-            </div>
-          </a>
-          <a href="#" class="result__card-link">
-            <img
-              src="<%=require('../../images/card_bg.png').default%>"
-              alt="Фото заголовка"
-              class="result__card-img"
-            />
-            <div class="result__card-description">
-              <p class="result__date">2 августа 2020</p>
-              <h3 class="result__card-title">
-                Национальное достояние – парки
-              </h3>
-              <p class="result__card-text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складыв...
-              </p>
-              <p class="result__card-source-link">Риа</p>
-            </div>
-          </a>
-          <a href="#" class="result__card-link">
-            <img
-              src="<%=require('../../images/card_bg.png').default%>"
-              alt="Фото заголовка"
-              class="result__card-img"
-            />
-            <div class="result__card-description">
-              <p class="result__date">2 августа 2020</p>
-              <h3 class="result__card-title">Национальное достояние – парки</h3>
-              <p class="result__card-text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых
-                территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-              <p class="result__card-source-link">Дзен</p>
-            </div>
-          </a>
-          <a href="#" class="result__card-link">
-            <img
-              src="<%=require('../../images/card_bg.png').default%>"
-              alt="Фото заголовка"
-              class="result__card-img"
-            />
-            <div class="result__card-description">
-              <p class="result__date">2 августа 2020</p>
-              <h3 class="result__card-title">
-                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-              </h3>
-              <p class="result__card-text">
-                Знаменитый фотограф снимает первозданные леса России, чтобы
-                рассказать о необходимости их сохранения. В этот раз он
-                отправился в Двинско-Пинежскую тайгу, где...
-              </p>
-              <p class="result__card-source-link">Медиазона</p>
-            </div>
-          </a>
+        <div class="container result__cards ">
+          <template class="result__template">
+            <a href="#" target="_blank" class="result__card-link">
+              <img
+                src="<%=require("../../images/404_page.png").default%>"
+                alt="Фото заголовка"
+                class="result__card-img"
+              />
+              <div class="result__card-description">
+                <p class="result__date">2 августа 2020</p>
+                <h3 class="result__card-title">
+                  Национальное достояние – парки
+                </h3>
+                <p class="result__card-text">
+                  В 2016 году Америка отмечала важный юбилей: сто лет назад
+                  здесь начала складываться система национальных парков –
+                  охраняемых территорий, где и сегодня каждый может приобщиться
+                  к природе.
+                </p>
+                <p class="result__card-source-link">Лента.ру</p>
+              </div>
+            </a>
+          </template>
+          
         </div>
         <button class="button result__button">Показать еще</button>
       </section>
@@ -181,7 +117,7 @@
       <section class="author container">
         <div class="author__img-container">
           <img
-            src="<%= require('../../images/avatar.jpg').default%>"
+            src="<%= require("../../images/avatar.jpg").default%>"
             alt="Автор "
             class="author__avatar"
           />
@@ -202,41 +138,42 @@
     </main>
     <footer class="footer container">
       <p class="footer__copyright">© 2020 NewsAnalyzer</p>
-        <nav class="footer__nav">
-          <ul class="footer__links">
-            <li class="footer__links-item">
-              <a class="footer__link" href="index.html">Главная</a>
-            </li>
-            <li class="footer__links-item">
-              <a class="footer__link" href="about.html">О проекте</a>
-            </li>
-            <li class="footer__links-item">
-              <a class="footer__link"  target="_blank" href="https://praktikum.yandex.ru"
-                >Яндекс.Практикум</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <ul class="footer__social-links">
-          <li class="footer__social-link">
-            <a href="https://github.com/Zavizhenetc" target="_blank"
-              ><img
-                src="<%=require('../../images/github.png').default%>"
-                alt="лого Github"
-              />
-            </a>
+      <nav class="footer__nav">
+        <ul class="footer__links">
+          <li class="footer__links-item">
+            <a class="footer__link" href="index.html">Главная</a>
           </li>
-          <li class="footer__social-link">
+          <li class="footer__links-item">
+            <a class="footer__link" href="about.html">О проекте</a>
+          </li>
+          <li class="footer__links-item">
             <a
-              href="https://www.facebook.com/alexandr.zavizhenec"
+              class="footer__link"
               target="_blank"
-              ><img
-                src="<%=require('../../images/fb.png').default%>"
-                alt="лого FB"
-                class=""
-            /></a>
+              href="https://praktikum.yandex.ru"
+              >Яндекс.Практикум</a
+            >
           </li>
         </ul>
+      </nav>
+      <ul class="footer__social-links">
+        <li class="footer__social-link">
+          <a href="https://github.com/Zavizhenetc" target="_blank"
+            ><img
+              src="<%=require("../../images/github.png").default%>"
+              alt="лого Github"
+            />
+          </a>
+        </li>
+        <li class="footer__social-link">
+          <a href="https://www.facebook.com/alexandr.zavizhenec" target="_blank"
+            ><img
+              src="<%=require("../../images/fb.png").default%>"
+              alt="лого FB"
+              class=""
+          /></a>
+        </li>
+      </ul>
     </footer>
 
     <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>

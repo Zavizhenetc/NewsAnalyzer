@@ -1,10 +1,10 @@
-@import url("./__logo/header__logo.css");
-@import url("./__link/header__link.css");
-@import url("./__links/header__links.css");
-@import url("./__link/_activ/header__link_activ.css");
-@import url("./__logo/_white/header__logo_white.css");
-@import url("./__link/_white/header__link_white.css");
-@import url("./__link/_activ-white/header__link_activ-white.css");
+@import url('./__logo/header__logo.css');
+@import url('./__link/header__link.css');
+@import url('./__links/header__links.css');
+@import url('./__link/_activ/header__link_activ.css');
+@import url('./__logo/_white/header__logo_white.css');
+@import url('./__link/_white/header__link_white.css');
+@import url('./__link/_activ-white/header__link_activ-white.css');
 
 .header {
   min-height: 80px;

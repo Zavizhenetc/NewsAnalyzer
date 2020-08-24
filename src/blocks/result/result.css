@@ -1,16 +1,16 @@
-@import url("./__title/result__title.css");
-@import url("./__info/result__info.css");
-@import url("./__card-link/results__card-link.css");
-@import url("./__cards/result__cards.css");
-@import url("./__card-img/result__card-img.css");
-@import url("./__date/result__date.css");
-@import url("./__card-title/result__card-title.css");
-@import url("./__card-text/result__card-text.css");
-@import url("./__card-source-link/result__card-source-link.css");
-@import url("./__card-description/result__card-description.css");
-@import url("./__button/result__button.css");
-@import url("./__link/result__link.css");
-@import url("./__link-arrow/result__link-arrow.css");
+@import url('./__title/result__title.css');
+@import url('./__info/result__info.css');
+@import url('./__card-link/results__card-link.css');
+@import url('./__cards/result__cards.css');
+@import url('./__card-img/result__card-img.css');
+@import url('./__date/result__date.css');
+@import url('./__card-title/result__card-title.css');
+@import url('./__card-text/result__card-text.css');
+@import url('./__card-source-link/result__card-source-link.css');
+@import url('./__card-description/result__card-description.css');
+@import url('./__button/result__button.css');
+@import url('./__link/result__link.css');
+@import url('./__link-arrow/result__link-arrow.css');
 .result {
   background-color: #f5f6f7;
   font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -19,6 +19,7 @@
   padding: 7%;
   padding-top: 3.2%;
   padding-bottom: 3%;
+  display: none;
 }
 
 @media screen and (max-width: 420px) {
