@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Alex Zavizhenetc" />
     <title>NewsAnalyzer</title>
-    <link
-      rel="shortcut icon"
-      href="<%= require("../../images/favicon.ico").default %> "
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="<%=
+    require('../../images/favicon.ico').default %> " type="image/x-icon" />
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>" />
   </head>
   <body class="root">
@@ -38,9 +35,7 @@
     <main class="main">
       <!-- клиентам -->
       <section class="clients container">
-        <h2 class="clients__title">
-          Клиентам
-        </h2>
+        <h2 class="clients__title">Клиентам</h2>
         <p class="clients__text">
           Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель —
           показать, чему научился студент, какими технологиями владеет.
@@ -74,48 +69,39 @@
         <div class="container stack__container">
           <h2 class="stack__title">Используемые технологии</h2>
           <div class="stack__img-container">
-            <img
-              src="<%=require("../../images/HTML.png").default%>"
-              alt="HTML"
-              class="stack__img"
-            />
-            <img
-              src="<%=require("../../images/CSS.png").default%>"
-              alt="CSS"
-              class="stack__img"
-            />
-            <img
-              src="<%=require("../../images/JS.png").default%>"
-              alt="Java Script"
-              class="stack__img"
-            />
-            <img
-              src="<%=require("../../images/webpack.png").default%>"
-              alt="Webpack"
-              class="stack__img"
-            />
+            <img src="<%=require('../../images/HTML.png').default%>" alt="HTML"
+            class="stack__img" /> <img
+            src="<%=require('../../images/CSS.png').default%>" alt="CSS"
+            class="stack__img" /> <img
+            src="<%=require('../../images/JS.png').default%>" alt="Java Script"
+            class="stack__img" /> <img
+            src="<%=require('../../images/webpack.png').default%>" alt="Webpack"
+            class="stack__img" />
           </div>
         </div>
       </section>
       <!-- об авторе  -->
       <section class="author container">
         <div class="author__img-container">
-          <img
-            src="<%= require("../../images/avatar.jpg").default%>"
-            alt="Автор "
-            class="author__avatar"
-          />
+          <img src="<%= require('../../images/avatar_.png').default%>" alt="Автор
+          " class="author__avatar" />
         </div>
 
         <div class="author__about">
           <h2 class="author__title">Об авторе</h2>
           <p class="author__text">
-            Это блок с описанием автора проекта. Здесь следует указать, как вас
-            зовут, чем вы занимаетесь, какими технологиями разработки владеете..
+            Добрый день! Меня зовут Александр, я frontend разработчик. Живу в
+            Москве. Закончил курс Яндекс.Практикума.
           </p>
           <p class="author__text">
-            Также можно рассказать о процессе обучения в Практикуме, чему вы тут
-            научились, и чем можете помочь потенциальным заказчикам
+            Мне нравится создавать интересные и современные проекты с внутренней
+            эстетикой и внешней красотой.Стремлюсь к чистому и красивому коду. В
+            работе использую HTML, CSS, JS, Webpack. Верстаю семантично,
+            кроссбраузерно и адаптивно(flex, grid), общаюсь с сервером
+            посредством API. Применяю методологию БЭМ, парадигму ООП. Активно
+            погружаюсь в IT сферу. С каждым днем совершенствую свои навыки в
+            разработке. Люблю путешествовать, вкусно готовить и рубится в
+            пинг-понг.
           </p>
         </div>
       </section>
@@ -133,16 +119,16 @@
         </div>
         <div class="container swiper-container">
           <div class="swiper-wrapper places-list">
-            <template id="swiper-slide" class="swiper-slide" display="none" >
-              <a href="https://github.com/Zavizhenetc/NewsAnalyzer" target="_blank" class="swiper-slide"
+            <template id="swiper-slide" class="swiper-slide" display="none">
+              <a
+                href="https://github.com/Zavizhenetc/NewsAnalyzer"
+                target="_blank"
+                class="swiper-slide"
               >
                 <p class="history__slide-date">14 августа, 2019</p>
                 <div class="history__container">
-                  <img
-                    src="<%= require("../../images/avatar.jpg").default%>"
-                    alt="Автор "
-                    class="history__slide-avatar"
-                  />
+                  <img src="<%= require('../../images/avatar.jpg').default%>"
+                  alt="Автор " class="history__slide-avatar" />
                   <div class="history__title-container">
                     <h3 class="history__slide-title">Инга Иванова</h3>
                     <p class="history__slide-email">ingaiva@yandex.ru</p>
@@ -155,7 +141,6 @@
                 </p>
               </a>
             </template>
-           
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
@@ -193,20 +178,16 @@
       </nav>
       <ul class="footer__social-links">
         <li class="footer__social-link">
-          <a href="https://github.com/Zavizhenetc" target="_blank"
-            > <img
-              src="<%=require("../../images/github.png").default%> "
-              alt="лого Github"
-            />
+          <a href="https://github.com/Zavizhenetc" target="_blank">
+            <img src="<%=require('../../images/github.png').default%> "
+            alt="лого Github" />
           </a>
         </li>
         <li class="footer__social-link">
           <a href="https://www.facebook.com/alexandr.zavizhenec" target="_blank"
-            ><img
-              src=" <%=require("../../images/fb.png").default%> "
-              alt="лого FB"
-             
-          /></a>
+            ><img src=" <%=require('../../images/fb.png').default%> " alt="лого
+            FB" /></a
+          >
         </li>
       </ul>
     </footer>
