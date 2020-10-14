@@ -7,6 +7,7 @@
 }
 @media (max-width: 790px) {
   .author__title {
+    text-align: center;
     font-size: 30px;
     line-height: 40px;
     padding-top: 4%;
